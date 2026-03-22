@@ -1,0 +1,37 @@
+.modal-content {
+  width: 400px;
+  padding: 20px;
+}
+
+.modal-content h3 {
+  text-align: center;
+  color: #007bff;
+}
+
+.modal-content input[type="date"],
+.modal-content input[type="time"],
+.modal-content select {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button:nth-child(1) { background-color: #28a745; color: white; } /* Save */
+.actions button:nth-child(2) { background-color: #dc3545; color: white; } /* Cancel */

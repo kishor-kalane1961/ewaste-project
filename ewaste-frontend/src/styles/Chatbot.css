@@ -1,0 +1,93 @@
+.chatbot-container {
+  width: 350px;
+  height: 450px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.chatbot-header {
+  background: #2c7be5;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 12px 12px 0 0;
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-message {
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 80%;
+}
+
+.user-message {
+  background: #d1e7dd;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.bot-message {
+  background: #f8d7da;
+  align-self: flex-start;
+}
+
+.chatbot-input {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid #ccc;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.chatbot-input button {
+  margin-left: 8px;
+  padding: 8px 12px;
+  border: none;
+  background: #2c7be5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 🔹 Suggestions row */
+.chatbot-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.suggestion-btn {
+  background: #f1f1f1;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.suggestion-btn:hover {
+  background: #e0e0e0;
+}

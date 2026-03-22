@@ -1,0 +1,163 @@
+/* ---------------- Dashboard Container ---------------- */
+.pickup-dashboard {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  background: linear-gradient(145deg, #f0f4f8, #d9e2ec);
+  min-height: 100vh;
+  color: #333;
+}
+
+.pickup-dashboard h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0d6efd;
+}
+
+/* ---------------- Status Filters ---------------- */
+.status-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.status-filters button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #e0e7ff;
+  color: #0d6efd;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.status-filters button.active,
+.status-filters button:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* ---------------- Requests Container ---------------- */
+.requests-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---------------- Request Card ---------------- */
+.request-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.request-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.request-info p {
+  margin: 4px 0;
+}
+
+/* ---------------- Status Labels ---------------- */
+.status {
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 8px;
+  color: white;
+}
+
+.status.pending { background-color: #ffc107; }
+.status.scheduled { background-color: #17a2b8; }
+.status.picked_up { background-color: #0dcaf0; }
+.status.completed { background-color: #28a745; }
+.status.cancelled { background-color: #dc3545; }
+
+/* ---------------- Request Actions Buttons ---------------- */
+.request-actions button {
+  margin-left: 8px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.request-actions button:nth-child(1) { background-color: #17a2b8; color: white; } /* Send OTP / Picked Up */
+.request-actions button:nth-child(2) { background-color: #28a745; color: white; } /* Completed / Verify OTP */
+.request-actions button:nth-child(3) { background-color: #dc3545; color: white; } /* Cancel */
+
+.request-actions button:hover {
+  opacity: 0.85;
+}
+
+/* ---------------- OTP Input Field ---------------- */
+.request-actions input[type="text"] {
+  padding: 6px 10px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 120px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.request-actions input[type="text"]:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+}
+
+/* ---------------- OTP + Verify Buttons ---------------- */
+.request-actions .otp-verify-btn {
+  background-color: #0dcaf0;
+  color: white;
+  margin-left: 6px;
+}
+
+.request-actions .otp-verify-btn:hover {
+  opacity: 0.85;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  color: #007bff;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+

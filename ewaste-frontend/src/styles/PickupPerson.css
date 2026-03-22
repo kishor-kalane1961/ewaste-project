@@ -1,0 +1,102 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100; /* Higher than other modals */
+  padding: 10px; /* Prevent content from touching edges on small screens */
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px 20px;
+  width: 100%;
+  max-width: 420px; /* Slightly larger */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.3s ease-out;
+}
+
+.modal-content h3 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.modal-content input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.actions button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button:nth-child(1) {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.actions button:nth-child(1):hover {
+  background-color: #218838;
+}
+
+.actions button:nth-child(2) {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.actions button:nth-child(2):hover {
+  background-color: #c82333;
+}
+
+/* Optional slide-down animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 20px 15px;
+  }
+  .actions button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

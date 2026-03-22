@@ -1,0 +1,252 @@
+/* -------------------- Dashboard Container -------------------- */
+.admin-dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* -------------------- Filters & Buttons -------------------- */
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filters button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  opacity: 0.85;
+}
+
+/* -------------------- Requests Table -------------------- */
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.requests-table th,
+.requests-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.requests-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+/* -------------------- Reports Section -------------------- */
+.reports-section {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.reports-section h2 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.report-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.report-filters button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #17a2b8;
+  color: white;
+  transition: 0.3s;
+}
+
+.report-filters button:hover {
+  opacity: 0.85;
+}
+
+/* Custom Range Inputs */
+.custom-range {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.custom-range input[type="date"] {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.custom-range button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.custom-range button:hover {
+  opacity: 0.85;
+}
+
+/* Report Table */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.report-table th,
+.report-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.report-table th {
+  background-color: #17a2b8;
+  color: white;
+}
+
+/* -------------------- Modal Overlay -------------------- */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* -------------------- Modal Box -------------------- */
+.modal-content {
+  background: white;
+  padding: 25px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* -------------------- Action Buttons -------------------- */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: flex-end;
+}
+
+.actions button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button:hover {
+  opacity: 0.85;
+}
+
+/* Approve, Schedule, Reject, Close buttons */
+.actions button:nth-child(1) { background-color: #28a745; color: white; } /* Approve / Save */
+.actions button:nth-child(2) { background-color: #ffc107; color: white; } /* Schedule */
+.actions button:nth-child(3) { background-color: #dc3545; color: white; } /* Reject / Cancel */
+.actions button:nth-child(4) { background-color: #6c757d; color: white; } /* Close */
+
+/* -------------------- Input Fields -------------------- */
+.actions input[type="text"],
+.actions input[type="date"],
+.actions input[type="time"],
+.modal-content select {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+/* -------------------- Device Image -------------------- */
+.device-img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* -------------------- Add Pickup Person Modal -------------------- */
+.pickup-person-form h3 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.pickup-person-form input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
